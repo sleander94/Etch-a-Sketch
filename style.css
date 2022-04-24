@@ -1,0 +1,49 @@
+* {
+    background-color: gray;
+    border: 1px solid red;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    gap: 24px;
+    height: 100vh;
+}
+
+/* Etch-a-Sketch Grid Styles */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+}
+
+#container div {
+    flex: 1 0 6.25%;
+}
+
+#container div:before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+/* Menu Button Styles */
+
+#menu {
+    display: flex;
+}
+
+
+.clear {
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 8px;
+}
