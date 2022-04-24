@@ -1,21 +1,36 @@
+// Set color values
 const background = 'gray';
 let drawColor = 'blue';
+
+// Generate 'n' x 'n' grid and color each element on mouseover
 const container = document.querySelector('#container');
 
-for (i = 0; i < 256; i++) {
-    div = document.createElement('div');
-    div.classList.toggle('square')
-    container.appendChild(div);
-}
+function createGrid(n) {
+    container.innerHTML = "";
+    for (i = 0; i < n; i++) {
+        column = document.createElement('div');
+        column.classList.toggle('square');
+        column.classList.toggle('column');
+         for (x = 0; x < n; x++) {
+            row = document.createElement('div');
+            row.classList.toggle('square');
+            row.classList.toggle('row');
+            column.appendChild(row);
+        } 
+        container.appendChild(column);
 
-const squares = document.querySelectorAll('.square');
-squares.forEach(square => square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = drawColor;
-}));
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = drawColor;
+    }))}};
 
+// Create initial grid on page load
+createGrid(16);
+
+// Clear container on button press
 const clear = document.querySelector('.clear');
 clear.addEventListener('click', () => {
-    squares.forEach(square => square.style.backgroundColor = background);
+container.innerHTML = "";
+createGrid(16);
 });
-
 
