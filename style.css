@@ -8,7 +8,6 @@
 
 h1 {
     font-size: 48px;
-    color:rgb(164, 29, 185);
 }
 
 body {
@@ -19,10 +18,10 @@ body {
     padding: 16px;
     gap: 12px;
     height: 100vh;
-    background-image: linear-gradient(rgb(38, 215, 250), rgb(202, 19, 202));
+    background-color: rgb(255, 241, 210);
 }
 
-/* Etch-a-Sketch Grid Styles */
+/* Etch-a-Sketch Grid */
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -41,7 +40,7 @@ body {
     background-color: white;
 } 
 
-/* Menu Button Styles */
+/* Menu */
 
 #menu {
     display: flex;
@@ -49,11 +48,11 @@ body {
     justify-content: space-around;
 }
 
-
 #menu button {
     padding: 8px;
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 8px;
-    
+    background-color: white;
 }
+

@@ -1,6 +1,5 @@
 // Set color values
-const background = 'gray';
-let drawColor = 'blue';
+let drawColor = 'black';
 let gridDimension = 16;
 
 // Generate 'n' x 'n' grid and color each element on mouseover
@@ -39,7 +38,11 @@ clear.addEventListener('click', () => {
 const changeSize = document.querySelector('.change-size');
 changeSize.addEventListener('click', () => {
     gridDimension = (prompt('How many rows and columns? (1-100)'));
+    if (gridDimension > 0 && gridDimension < 101) {
     createGrid(gridDimension);
+    } else {
+        alert('Invalid Input');
+    }
 });
 
 // Change draw color on button press
