@@ -14,8 +14,16 @@
     ></div>
     <div id="menu">
         <button class="clear">Clear</button>
-        <button class="change-size">Dimensions</button>
-        <button class="change-color">Color</button>
+        <div class="dimensions-container">
+            <label for="dimensions"></label>
+            <input type="range" name="dimensions" id="dimensions" min="1" max="100" value="16">
+        <output class="output" for="dimesions"></output>
+        </div>
+        <div class="color-container">
+            <label for="color">Color:</label>
+            <input type="color" id="color">
+        </div>
+
     </div>
     <div id="container"></div>
 </body>
